@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <img src="img/pokemon.png" alt="Pokemon" class="img">
+      </div>
+      <div class="container">
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search your Pokémon" />
+            <select id="filterType">
+                <option value="all">All</option>
+                <option value="Grass Poison">Grass Poison</option>
+                <option value="Fire">Fire</option>
+                <option value="Water">Water</option>
+                <option value="Bug">Bug</option>
+            </select>
+            <select id="sortBy">
+                <option value="alphabeticalAsc"> (A-Z)</option>
+                <option value="alphabeticalDesc"> (Z-A)</option>
+                <option value="weightAsc">Weight (Low to High)</option>
+                <option value="weightDesc">Weight (High to Low)</option>
+            </select>
+            <button id="searchButton">Search</button>
+        </div>
+        <div  id="pokemonContainer" class="pokemon-list">
+            <div class="card" data-name="Bulbasaur">
+                <div class="header">001</div>
+                <div class="name">Bulbasaur</div>
+                <div class="image">
+                    <img src="http://www.serebii.net/pokemongo/pokemon/001.png" alt="Bulbasaur">
+                </div>
+                <div class="type">Grass Poison</div>
+                <div class="info">Candy count: 25</div>
+                <div class="info">6.9 kg</div>
+                <div class="weaknesses">Fire Ice Flying Psychic</div>
+                <div class="time">20:00</div>
+        </div>  
+<div class="card" data-name="Ivysaur">
+    <div class="header">002</div>
+    <div class="name">Ivysaur</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/002.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">13.0 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">07:00</div>
+</div>
+<div class="card" data-name="Venusaur">
+    <div class="header">003</div>
+    <div class="name">Venusaur</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/003.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">100.0 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">11:30</div>
+</div>
+<div class="card" data-name="Charmander">
+    <div class="header">004</div>
+    <div class="name">Charmander</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/004.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">8.5 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">08:45</div>
+</div>
+<div class="card" data-name="Charmeleon">
+    <div class="header">005</div>
+    <div class="name">Charmeleon</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/005.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">19.0 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">19:00</div>
+</div>
+<div class="card" data-name="Charizard">
+    <div class="header">006</div>
+    <div class="name">Charizard</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/006.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">90.5 kg</div>
+    <div class="weaknesses">Water Electric Rock</div>
+    <div class="time">13:34</div>
+</div>
+<div class="card">
+    <div class="header" data-name="Squirtle">007</div>
+    <div class="name">Squirtle</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/007.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">9.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">04:25</div>
+</div>
+<div class="card" data-name="Wartortle">
+    <div class="header">008</div>
+    <div class="name">Wartortle</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/008.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">22.5 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">07:02</div>
+</div>
+<div class="card" data-name="Blastoise">
+    <div class="header">009</div>
+    <div class="name">Blastoise</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/009.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">85.5 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">00:06</div>
+</div>
+<div class="card" data-name="Caterpie">
+    <div class="header">010</div>
+    <div class="name">Caterpie</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/010.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug</div>
+    <div class="info">Candy count: 12</div>
+    <div class="info">2.9 kg</div>
+    <div class="weaknesses">Fire Flying Rock</div>
+    <div class="time">16:35</div>
+</div>
+<div class="card" data-name="Metapod">
+    <div class="header">011</div>
+    <div class="name">Metapod</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/011.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">9.9 kg</div>
+    <div class="weaknesses">Fire Flying Rock</div>
+    <div class="time">02:11</div>
+</div>
+<div class="card" data-name="Butterfree">
+    <div class="header">012</div>
+    <div class="name">Butterfree</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/012.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">32.0 kg</div>
+    <div class="weaknesses">Fire Electric Ice Flying Rock</div>
+    <div class="time">05:23</div>
+</div>
+<div class="card" data-name="Weedle">
+    <div class="header">013</div>
+    <div class="name">Weedle</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/013.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Poison</div>
+    <div class="info">Candy count: 12</div>
+    <div class="info">3.2 kg</div>
+    <div class="weaknesses">Fire Flying Psychic Rock</div>
+    <div class="time">02:21</div>
+</div>
+<div class="card" data-name="Kakuna">
+    <div class="header">014</div>
+    <div class="name">Kakuna</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/014.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Poison</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">10.0 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">02:30</div>
+</div>
+<div class="card" data-name="Beedrill">
+    <div class="header">015</div>
+    <div class="name">Beedrill</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/015.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">29.5 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">04:50</div>
+</div>
+<div class="card">
+    <div class="header" data-name="Pidgey">016</div>
+    <div class="name">Pidgey</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/016.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: 12</div>
+    <div class="info">1.8 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">01:34</div>
+</div>
+<div class="card" data-name="Pidgeotto">
+    <div class="header">017</div>
+    <div class="name">Pidgeotto</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/017.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">30.0 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">01:30</div>
+</div>
+<div class="card" data-name="Pidgeot">
+    <div class="header">018</div>
+    <div class="name">Pidgeot</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/018.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="weight">39.5 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">01:50</div>
+</div>
+<div class="card" data-name="Rattata">
+    <div class="header">019</div>
+    <div class="name">Rattata</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/019.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">3.5 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">01:55</div>
+</div>
+<div class="card" data-name="Raticate">
+    <div class="header">020</div>
+    <div class="name">Raticate</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/020.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">18.5 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">01:56</div>
+</div>
+<div class="card" data-name="Spearow">
+    <div class="header">021</div>
+    <div class="name">Spearow</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/021.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">2.0 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">12:25</div>
+</div>
+<div class="card" data-name="Fearow">
+    <div class="header">022</div>
+    <div class="name">Fearow</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/022.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">38.0 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">01:11</div>
+</div>
+<div class="card" data-name="Ekans">
+    <div class="header">023</div>
+    <div class="name">Ekans</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/023.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">6.9 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">12:20</div>
+</div>
+<div class="card" data-name="Arbok">
+    <div class="header">024</div>
+    <div class="name">Arbok</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/024.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">65.0 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">01:50</div>
+</div>
+<div class="card" data-name="Pikachu">
+    <div class="header">025</div>
+    <div class="name">Pikachu</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/025.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">6.0 kg</div>
+    <div class="weaknesses">Ground</div>
+    <div class="time">04:00</div>
+</div>
+<div class="card" data-name="Raichu">
+    <div class="header">026</div>
+    <div class="name">Raichu</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/026.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">30.0 kg</div>
+    <div class="weaknesses">Ground</div>
+    <div class="time">23:58</div>
+</div>
+<div class="card" data-name="Sandshrew">
+    <div class="header">027</div>
+    <div class="name">Sandshrew</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/027.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ground</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">12.0 kg</div>
+    <div class="weaknesses">Water Grass Ice</div>
+    <div class="time">01:58</div>
+</div>
+<div class="card" data-name="Sandslash">
+    <div class="header">028</div>
+    <div class="name">Sandslash</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/028.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ground</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">29.5 kg</div>
+    <div class="weaknesses">Water Grass Ice</div>
+    <div class="time">12:34</div>
+</div>
+<div class="card" data-name="Nidoran ♀ (Female)">
+    <div class="header">029</div>
+    <div class="name">Nidoran ♀ (Female)</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/029.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">7.0 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">01:51</div>
+</div>
+<div class="card" data-name="Nidorina">
+    <div class="header">030</div>
+    <div class="name">Nidorina</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/030.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">20.0 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">07:22</div>
+</div>
+<div class="card" data-name="Nidoqueen">
+    <div class="header">031</div>
+    <div class="name">Nidoqueen</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/031.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison Ground</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">60.0 kg</div>
+    <div class="weaknesses">Water Ice Ground Psychic</div>
+    <div class="time">12:35</div>
+</div>
+<div class="card" data-name="Nidoran ♂ (Male)">
+    <div class="header">032</div>
+    <div class="name">Nidoran ♂ (Male)</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/032.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">9.0 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">01:12</div>
+</div>
+<div class="card" data-name="Nidorino">
+    <div class="header">033</div>
+    <div class="name">Nidorino</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/033.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">19.5 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">09:02</div>
+</div>
+<div class="card" data-name="Nidoking">
+    <div class="header">034</div>
+    <div class="name">Nidoking</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/034.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison Ground</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">62.0 kg</div>
+    <div class="weaknesses">Water Ice Ground Psychic</div>
+    <div class="time">12:16</div>
+</div>
+<div class="card" data-name="Clefairy">
+    <div class="header">035</div>
+    <div class="name">Clefairy</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/035.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">7.5 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">03:30</div>
+</div>
+<div class="card" data-name="Clefable">
+    <div class="header">036</div>
+    <div class="name">Clefable</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/036.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">40.0 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">03:29</div>
+</div>
+<div class="card" data-name="Vulpix">
+    <div class="header">037</div>
+    <div class="name">Vulpix</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/037.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">9.9 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">13:43</div>
+</div>
+<div class="card" data-name="Ninetales">
+    <div class="header">038</div>
+    <div class="name">Ninetales</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/038.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">19.9 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">01:32</div>
+</div>
+<div class="card" data-name="Jigglypuff">
+    <div class="header">039</div>
+    <div class="name">Jigglypuff</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/039.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">5.5 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">08:46</div>
+</div>
+<div class="card" data-name="Wigglytuff">
+    <div class="header">040</div>
+    <div class="name">Wigglytuff</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/040.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">12.0 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">12:28</div>
+</div>
+<div class="card" data-name="Zubat">
+    <div class="header">041</div>
+    <div class="name">Zubat</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/041.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison Flying</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">7.5 kg</div>
+    <div class="weaknesses">Electric Ice Psychic Rock</div>
+    <div class="time">12:28</div>
+</div>
+<div class="card" data-name="Golbat">
+    <div class="header">042</div>
+    <div class="name">Golbat</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/042.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">55.0 kg</div>
+    <div class="weaknesses">Electric Ice Psychic Rock</div>
+    <div class="time">02:15</div>
+</div>
+<div class="card" data-name="Oddish">
+    <div class="header">043</div>
+    <div class="name">Oddish</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/043.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">5.4 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">03:58</div>
+</div>
+<div class="card" data-name="Gloom">
+    <div class="header">044</div>
+    <div class="name">Gloom</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/044.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">6.9 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">11:33</div>
+</div>
+<div class="card" data-name="Vileplume">
+    <div class="header">045</div>
+    <div class="name">Vileplume</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/045.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">18.6 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">23:58</div>
+</div>
+<div class="card" data-name="Paras">
+    <div class="header">046</div>
+    <div class="name">Paras</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/046.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Grass</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">5.4 kg</div>
+    <div class="weaknesses">Fire Ice Poison Flying Bug Rock</div>
+    <div class="time">01:42</div>
+</div>
+<div class="card" data-name="Parasect">
+    <div class="header">047</div>
+    <div class="name">Parasect</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/047.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Grass</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">29.5 kg</div>
+    <div class="weaknesses">Fire Ice Poison Flying Bug Rock</div>
+    <div class="time">20:00</div>
+</div>
+<div class="card" data-name="Venonat">
+    <div class="header">048</div>
+    <div class="name">Venonat</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/048.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Poison</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">30.0 kg</div>
+    <div class="weaknesses">Fire Flying Psychic Rock</div>
+    <div class="time">02:31</div>
+</div>
+<div class="card" data-name="Venomoth">
+    <div class="header">049</div>
+    <div class="name">Venomoth</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/049.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">12.5 kg</div>
+    <div class="weaknesses">Fire Flying Psychic Rock</div>
+    <div class="time">23:40</div>
+</div>
+<div class="card" data-name="Diglett">
+    <div class="header">050</div>
+    <div class="name">Diglett</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/050.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ground</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">0.8 kg</div>
+    <div class="weaknesses">Water Grass Ice</div>
+    <div class="time">02:22</div>
+</div>
+<div class="card" data-name="Dugtrio">
+    <div class="header">051</div>
+    <div class="name">Dugtrio</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/051.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ground</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">33.3 kg</div>
+    <div class="weaknesses">Water Grass Ice</div>
+    <div class="time">12:37</div>
+</div>
+<div class="card" data-name="Meowth">
+    <div class="header">052</div>
+    <div class="name">Meowth</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/052.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">4.2 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">02:54</div>
+</div>
+<div class="card" data-name="Persian">
+    <div class="header">053</div>
+    <div class="name">Persian</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/053.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">32.0 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">02:44</div>
+</div>
+<div class="card" data-name="Psyduck">
+    <div class="header">054</div>
+    <div class="name">Psyduck</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/054.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">19.6 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">03:41</div>
+</div>
+<div class="card" data-name="Golduck">
+    <div class="header">055</div>
+    <div class="name">Golduck</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/055.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">76.6 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">23:06</div>
+</div>
+<div class="card" data-name="Mankey">
+    <div class="header">056</div>
+    <div class="name">Mankey</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/056.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fighting</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">28.0 kg</div>
+    <div class="weaknesses">Flying Psychic Fairy</div>
+    <div class="time">12:52</div>
+</div>
+<div class="card" data-name="Primeape">
+    <div class="header">057</div>
+    <div class="name">Primeape</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/057.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fighting</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">32.0 kg</div>
+    <div class="weaknesses">Flying Psychic Fairy</div>
+    <div class="time">12:33</div>
+</div>
+<div class="card" data-name="Growlithe">
+    <div class="header">058</div>
+    <div class="name">Growlithe</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/058.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">19.0 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">03:57</div>
+</div>
+<div class="card" data-name="Arcanine">
+    <div class="header">059</div>
+    <div class="name">Arcanine</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/059.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">155.0 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">03:11</div>
+</div>
+<div class="card" data-name="Poliwag">
+    <div class="header">060</div>
+    <div class="name">Poliwag</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/060.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">12.4 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">03:40</div>
+</div>
+<div class="card" data-name="Poliwhirl">
+    <div class="header">061</div>
+    <div class="name">Poliwhirl</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/061.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">20.0 kg</div>
+    <div class="weaknesses">Electric Grass </div>
+    <div class="time">09:14</div>
+</div>
+<div class="card" data-name="Poliwrath">
+    <div class="header">062</div>
+    <div class="name">Poliwrath</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/062.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Fighting</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">54.0 kg</div>
+    <div class="weaknesses">Electric Grass Flying Psychic Fairy</div>
+    <div class="time">01:32</div>
+</div>
+<div class="card" data-name="Abra">
+    <div class="header">063</div>
+    <div class="name">Abra</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/063.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">19.5 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">04:30</div>
+</div>
+<div class="card" data-name="Kadabra">
+    <div class="header">064</div>
+    <div class="name">Kadabra</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/064.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">56.5 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">11:25</div>
+</div>
+<div class="card" data-name="Alakazam">
+    <div class="header">065</div>
+    <div class="name">Alakazam</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/065.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">48.0 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">12:33</div>
+</div>
+<div class="card" data-name="Machop">
+    <div class="header">066</div>
+    <div class="name">Machop</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/066.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fighting</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">19.5 kg</div>
+    <div class="weaknesses">Flying Psychic Fairy</div>
+    <div class="time">01:55</div>
+</div>
+<div class="card" data-name="Machoke">
+    <div class="header">067</div>
+    <div class="name">Machoke</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/067.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fighting</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">70.5 kg</div>
+    <div class="weaknesses">Flying Psychic Fairy</div>
+    <div class="time">10:32</div>
+</div>
+<div class="card" data-name="Machamp">
+    <div class="header">068</div>
+    <div class="name">Machamp</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/068.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fighting</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">130.0 kg</div>
+    <div class="weaknesses">Flying Psychic Fairy</div>
+    <div class="time">02:55</div>
+</div>
+<div class="card" data-name="Bellsprout">
+    <div class="header">069</div>
+    <div class="name">Bellsprout</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/069.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">4.0 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">04:10</div>
+</div>
+<div class="card" data-name="Weepinbell">
+    <div class="header">070</div>
+    <div class="name">Weepinbell</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/070.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">6.4 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">09:45</div>
+</div>
+<div class="card" data-name="Victreebel">
+    <div class="header">071</div>
+    <div class="name">Victreebel</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/071.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">15.5 kg</div>
+    <div class="weaknesses">Fire Ice Flying Psychic</div>
+    <div class="time">12:19</div>
+</div>
+<div class="card" data-name="Tentacool">
+    <div class="header">072</div>
+    <div class="name">Tentacool</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/072.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Poison</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">45.5 kg</div>
+    <div class="weaknesses">Electric Ground Psychic</div>
+    <div class="time">03:20</div>
+</div>
+<div class="card" data-name="Tentacruel">
+    <div class="header">073</div>
+    <div class="name">Tentacruel</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/073.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">55.0 kg</div>
+    <div class="weaknesses">Electric Ground Psychic</div>
+    <div class="time">23:36</div>
+</div>
+<div class="card" data-name="Geodude">
+    <div class="header">074</div>
+    <div class="name">Geodude</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/074.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Ground</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">20.0 kg</div>
+    <div class="weaknesses">Fighting Ground Steel</div>
+    <div class="time">12:40</div>
+</div>
+<div class="card" data-name="Graveler">
+    <div class="header">075</div>
+    <div class="name">Graveler</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/075.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Ground</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">105.0 kg</div>
+    <div class="weaknesses">Water Grass Ice Fighting Ground Steel</div>
+    <div class="time">04:53</div>
+</div>
+<div class="card" data-name="Golem">
+    <div class="header">076</div>
+    <div class="name">Golem</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/076.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Ground</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">300.0 kg</div>
+    <div class="weaknesses">Water Grass Ice Fighting
+        Ground Steel</div>
+    <div class="time">12:16</div>
+</div>
+<div class="card" data-name="Ponyta">
+    <div class="header">077</div>
+    <div class="name">Ponyta</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/077.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">30.0 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">02:50</div>
+</div>
+<div class="card" data-name="Rapidash">
+    <div class="header">078</div>
+    <div class="name">Rapidash</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/078.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">95.0 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">04:00</div>
+</div>
+<div class="card" data-name="Slowpoke">
+    <div class="header">079</div>
+    <div class="name">Slowpoke</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/079.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Psychic</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">36.0 kg</div>
+    <div class="weaknesses">Electric Grass Bug Ghost
+        Dark</div>
+    <div class="time">07:12</div>
+</div>
+<div class="card" data-name="Slowbro">
+    <div class="header">080</div>
+    <div class="name">Slowbro</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/080.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">78.5 kg</div>
+    <div class="weaknesses">Electric Grass Bug Ghost
+        Dark</div>
+    <div class="time">02:56</div>
+</div>
+<div class="card" data-name="Magnemite">
+    <div class="header">081</div>
+    <div class="name">Magnemite</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/081.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">6.0 kg</div>
+    <div class="weaknesses">Fire Water Ground</div>
+    <div class="time">04:04</div>
+</div>
+<div class="card" data-name="Magneton">
+    <div class="header">082</div>
+    <div class="name">Magneton</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/082.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">60.0 kg</div>
+    <div class="weaknesses">Fire Water Ground</div>
+    <div class="time">15:25</div>
+</div>
+<div class="card" data-name="Farfetch'd">
+    <div class="header">083</div>
+    <div class="name">Farfetch'd</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/083.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">15.0 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">01:09</div>
+</div>
+<div class="card" data-name="Doduo">
+    <div class="header">084</div>
+    <div class="name">Doduo</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/084.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">39.2 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">05:10</div>
+</div>
+<div class="card" data-name="Dodrio">
+    <div class="header">085</div>
+    <div class="name">Dodrio</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/085.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">85.2 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">02:12</div>
+</div>
+<div class="card" data-name="Seel">
+    <div class="header">086</div>
+    <div class="name">Seel</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/086.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">90.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">06:46</div>
+</div>
+<div class="card" data-name="Dewgong">
+    <div class="header">087</div>
+    <div class="name">Dewgong</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/087.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Ice</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">120.0 kg</div>
+    <div class="weaknesses">Electric Grass Fighting
+        Rock</div>
+    <div class="time">06:04</div>
+</div>
+<div class="card" data-name="Grimer">
+    <div class="header">088</div>
+    <div class="name">Grimer</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/088.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">30.0 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">15:11</div>
+</div>
+<div class="card" data-name="Muk">
+    <div class="header">089</div>
+    <div class="name">Muk</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/089.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">30.0 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">01:28</div>
+</div>
+<div class="card" data-name="Shellder">
+    <div class="header">090</div>
+    <div class="name">Shellder</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/090.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">4.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">07:39</div>
+</div>
+<div class="card" data-name="Cloyster">
+    <div class="header">091</div>
+    <div class="name">Cloyster</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/091.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Ice</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">132.5 kg</div>
+    <div class="weaknesses">Electric Grass Fighting
+        Rock</div>
+    <div class="time">02:33</div>
+</div>
+<div class="card" data-name="Gastly">
+    <div class="header">092</div>
+    <div class="name">Gastly</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/092.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ghost Poison</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">0.1 kg</div>
+    <div class="weaknesses">Ground Psychic Ghost Dark</div>
+    <div class="time">04:21</div>
+</div>
+<div class="card" data-name="Haunter">
+    <div class="header">093</div>
+    <div class="name">Haunter</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/093.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ghost Poison</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">0.1 kg</div>
+    <div class="weaknesses">Ground Psychic Ghost Dark</div>
+    <div class="time">00:10</div>
+</div>
+<div class="card" data-name="Gengar">
+    <div class="header">094</div>
+    <div class="name">Gengar</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/094.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ghost Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">40.5 kg</div>
+    <div class="weaknesses">Ground Psychic Ghost Dark</div>
+    <div class="time">20:00</div>
+</div>
+<div class="card" data-name="Onix">
+    <div class="header">095</div>
+    <div class="name">Onix</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/095.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Ground</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">210.0 kg</div>
+    <div class="weaknesses">Water Grass Ice Fighting
+        Ground Steel</div>
+    <div class="time">01:18</div>
+</div>
+<div class="card" data-name="Drowzee">
+    <div class="header">096</div>
+    <div class="name">Drowzee</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/096.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">32.4 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">01:51</div>
+</div>
+<div class="card" data-name="Hypno">
+    <div class="header">097</div>
+    <div class="name">Hypno</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/097.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">75.6 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">02:17</div>
+</div>
+<div class="card" data-name="Krabby">
+    <div class="header">098</div>
+    <div class="name">Krabby</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/098.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">6.5 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">03:33</div>
+</div>
+<div class="card" data-name="Kingler">
+    <div class="header">099</div>
+    <div class="name">Kingler</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/099.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">60.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">03:44</div>
+</div>
+<div class="card" data-name="Voltorb">
+    <div class="header">100</div>
+    <div class="name">Voltorb</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/100.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">10.4 kg</div>
+    <div class="weaknesses">Ground</div>
+    <div class="time">04:36</div>
+</div>
+<div class="card" data-name="Electrode">
+    <div class="header">101</div>
+    <div class="name">Electrode</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/101.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">66.6 kg</div>
+    <div class="weaknesses">Ground</div>
+    <div class="time">04:10</div>
+</div>
+<div class="card" data-name="Exeggcute">
+    <div class="header">102</div>
+    <div class="name">Exeggcute</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/102.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Psychic</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">2.5 kg</div>
+    <div class="weaknesses">Fire Ice Poison Flying Bug
+        Ghost Dark</div>
+    <div class="time">09:09</div>
+</div>
+<div class="card" data-name="Exeggutor">
+    <div class="header">103</div>
+    <div class="name">Exeggutor</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/103.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">120.0 kg</div>
+    <div class="weaknesses">Fire Ice Poison Flying Bug
+        Ghost Dark</div>
+    <div class="time">12:34</div>
+</div>
+<div class="card" data-name="Cubone">
+    <div class="header">104</div>
+    <div class="name">Cubone</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/104.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ground</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">6.5 kg</div>
+    <div class="weaknesses">Water Grass Ice</div>
+    <div class="time">01:51</div>
+</div>
+<div class="card" data-name="Marowak">
+    <div class="header">105</div>
+    <div class="name">Marowak</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/105.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">45.0 kg</div>
+    <div class="weaknesses">Water Grass Ice</div>
+    <div class="time">03:59</div>
+</div>
+<div class="card" data-name="Hitmonlee">
+    <div class="header">106</div>
+    <div class="name">Hitmonlee</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/106.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fighting</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">49.8 kg</div>
+    <div class="weaknesses">Flying Psychic Fairy</div>
+    <div class="time">03:59</div>
+</div>
+<div class="card" data-name="Hitmonchan">
+    <div class="header">107</div>
+    <div class="name">Hitmonchan</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/107.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fighting</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">50.2 kg</div>
+    <div class="weaknesses">Flying Psychic Fairy</div>
+    <div class="time">05:58</div>
+</div>
+<div class="card" data-name="Lickitung">
+    <div class="header">108</div>
+    <div class="name">Lickitung</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/108.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">65.5 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">02:46</div>
+</div>
+<div class="card" data-name="Koffing">
+    <div class="header">109</div>
+    <div class="name">Koffing</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/109.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">1.0 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">08:16</div>
+</div>
+<div class="card" data-name="Weezing">
+    <div class="header">110</div>
+    <div class="name">Weezing</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/110.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Poison</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">9.5 kg</div>
+    <div class="weaknesses">Ground Psychic</div>
+    <div class="time">12:17</div>
+</div>
+<div class="card" data-name="Rhyhorn">
+    <div class="header">111</div>
+    <div class="name">Rhyhorn</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/111.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ground Rock</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">115.0 kg</div>
+    <div class="weaknesses">Water Grass Ice Fighting
+        Ground Steel</div>
+    <div class="time">20:00</div>
+</div>
+<div class="card" data-name="Rhydon">
+    <div class="header">112</div>
+    <div class="name">Rhydon</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/112.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ground Rock</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">120.0 kg</div>
+    <div class="weaknesses">Water Grass Ice Fighting
+        Ground Steel</div>
+    <div class="time">05:50</div>
+</div>
+<div class="card" data-name="Chansey">
+    <div class="header">113</div>
+    <div class="name">Chansey</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/113.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">34.6 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">04:46</div>
+</div>
+<div class="card" data-name="Tangela">
+    <div class="header">114</div>
+    <div class="name">Tangela</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/114.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Grass</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">35.0 kg</div>
+    <div class="weaknesses">Fire Ice Poison Flying Bug</div>
+    <div class="time">23:13</div>
+</div>
+<div class="card" data-name="Kangaskhan">
+    <div class="header">115</div>
+    <div class="name">Kangaskhan</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/115.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">8.0 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">02:40</div>
+</div>
+<div class="card" data-name="Horsea">
+    <div class="header">116</div>
+    <div class="name">Horsea</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/116.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">8.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">02:53</div>
+</div>
+<div class="card" data-name="Seadra">
+    <div class="header">117</div>
+    <div class="name">Seadra</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/117.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">25.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">03:18</div>
+</div>
+<div class="card" data-name="Goldeen">
+    <div class="header">118</div>
+    <div class="name">Goldeen</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/118.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">15.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">03:14</div>
+</div>
+<div class="card" data-name="Seaking">
+    <div class="header">119</div>
+    <div class="name">Seaking</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/119.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">39.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">05:21</div>
+</div>
+<div class="card" data-name="Staryu">
+    <div class="header">120</div>
+    <div class="name">Staryu</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/120.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">34.5 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">22:59</div>
+</div>
+<div class="card" data-name="Starmie">
+    <div class="header">121</div>
+    <div class="name">Starmie</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/121.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">80.0 kg</div>
+    <div class="weaknesses">Electric Grass Bug Ghost
+        Dark</div>
+    <div class="time">06:57</div>
+</div>
+<div class="card" data-name="Mr. Mime">
+    <div class="header">122</div>
+    <div class="name">Mr. Mime</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/122.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">54.5 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">01:51</div>
+</div>
+<div class="card" data-name="Scyther">
+    <div class="header">123</div>
+    <div class="name">Scyther</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/123.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">56.0 kg</div>
+    <div class="weaknesses">Fire Electric Ice Flying Rock</div>
+    <div class="time">05:43</div>
+</div>
+<div class="card" data-name="Jynx">
+    <div class="header">124</div>
+    <div class="name">Jynx</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/124.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ice Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">40.6 kg</div>
+    <div class="weaknesses">Fire Bug Rock Ghost Dark
+        Steel</div>
+    <div class="time">05:41</div>
+</div>
+<div class="card" data-name="Electabuzz">
+    <div class="header">125</div>
+    <div class="name">Electabuzz</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/125.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">30.0 kg</div>
+    <div class="weaknesses">Ground</div>
+    <div class="time">04:28</div>
+</div>
+<div class="card" data-name="Magmar">
+    <div class="header">126</div>
+    <div class="name">Magmar</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/126.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">44.5 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">20:36</div>
+</div>
+<div class="card" data-name="Pinsir">
+    <div class="header">127</div>
+    <div class="name">Pinsir</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/127.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Bug</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">55.0 kg</div>
+    <div class="weaknesses">Fire Flying Rock</div>
+    <div class="time">03:25</div>
+</div>
+<div class="card" data-name="Tauros">
+    <div class="header">128</div>
+    <div class="name">Tauros</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/128.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">88.4 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">00:37</div>
+</div>
+<div class="card" data-name="Magikarp">
+    <div class="header">129</div>
+    <div class="name">Magikarp</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/129.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: 400</div>
+    <div class="info">10.0 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">14:26</div>
+</div>
+<div class="card" data-name="Gyarados">
+    <div class="header">130</div>
+    <div class="name">Gyarados</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/130.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">235.0 kg</div>
+    <div class="weaknesses">Electric Rock</div>
+    <div class="time">02:15</div>
+</div>
+<div class="card" data-name="Lapras">
+    <div class="header">131</div>
+    <div class="name">Lapras</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/131.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water Ice</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">220.0 kg</div>
+    <div class="weaknesses">Electric Grass Fighting
+        Rock</div>
+    <div class="time">08:59</div>
+</div>
+<div class="card" data-name="Ditto">
+    <div class="header">132</div>
+    <div class="name">Ditto</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/132.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">4.0 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">20:00</div>
+</div>
+<div class="card" data-name="Eevee">
+    <div class="header">133</div>
+    <div class="name">Eevee</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/133.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">6.5 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">05:32</div>
+</div>
+<div class="card" data-name="Vaporeon">
+    <div class="header">134</div>
+    <div class="name">Vaporeon</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/134.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">29.0 kg</div>
+    <div class="weaknesses">Electric Grass</div>
+    <div class="time">10:54</div>
+</div>
+<div class="card" data-name="Jolteon">
+    <div class="header">135</div>
+    <div class="name">Jolteon</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/135.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">24.5 kg</div>
+    <div class="weaknesses">Ground</div>
+    <div class="time">02:30</div>
+</div>
+<div class="card" data-name="Flareon">
+    <div class="header">136</div>
+    <div class="name">Flareon</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/136.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">25.0 kg</div>
+    <div class="weaknesses">Water Ground Rock</div>
+    <div class="time">07:02</div>
+</div>
+<div class="card" data-name="Porygon">
+    <div class="header">137</div>
+    <div class="name">Porygon</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/137.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">36.5 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">02:49</div>
+</div>
+<div class="card" data-name="Omanyte">
+    <div class="header">138</div>
+    <div class="name">Omanyte</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/138.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">7.5 kg</div>
+    <div class="weaknesses">Electric Grass Fighting
+        Ground</div>
+    <div class="time">10:23</div>
+</div>
+<div class="card" data-name="Omastar">
+    <div class="header">139</div>
+    <div class="name">Omastar</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/139.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">35.0 kg</div>
+    <div class="weaknesses">Electric Grass Fighting
+        Ground</div>
+    <div class="time">05:04</div>
+</div>
+<div class="card" data-name="Kabuto">
+    <div class="header">140</div>
+    <div class="name">Kabuto</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/140.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Water</div>
+    <div class="info">Candy count: 50</div>
+    <div class="info">11.5 kg</div>
+    <div class="weaknesses">Electric Grass Fighting
+        Ground</div>
+    <div class="time">00:05</div>
+</div>
+<div class="card" data-name="Kabutops">
+    <div class="header">141</div>
+    <div class="name">Kabutops</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/141.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Water</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">40.5 kg</div>
+    <div class="weaknesses">Electric Grass Fighting
+        Ground</div>
+    <div class="time">23:40</div>
+</div>
+<div class="card" data-name="Aerodactyl">
+    <div class="header">142</div>
+    <div class="name">Aerodactyl</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/142.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Rock Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">59.0 kg</div>
+    <div class="weaknesses">Water Electric Ice Rock
+        Steel</div>
+    <div class="time">20:00</div>
+</div>
+<div class="card" data-name="Snorlax">
+    <div class="header">143</div>
+    <div class="name">Snorlax</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/143.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Normal</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">460.0 kg</div>
+    <div class="weaknesses">Fighting</div>
+    <div class="time">23:40</div>
+</div>
+<div class="card" data-name="Articuno">
+    <div class="header">144</div>
+    <div class="name">Articuno</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/144.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Ice Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">55.4 kg</div>
+    <div class="weaknesses">Fire Electric Rock Steel</div>
+    <div class="time">N/A</div>
+</div>
+<div class="card" data-name="Zapdos">
+    <div class="header">145</div>
+    <div class="name">Zapdos</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/145.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Electric Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">52.6 kg</div>
+    <div class="weaknesses">Ice Rock</div>
+    <div class="time">N/A</div>
+</div>
+<div class="card" data-name="Moltres">
+    <div class="header">146</div>
+    <div class="name">Moltres</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/146.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Fire Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">60.0 kg</div>
+    <div class="weaknesses">Water Electric Rock</div>
+    <div class="time">N/A</div>
+</div>
+<div class="card" data-name="Dratini">
+    <div class="header">147</div>
+    <div class="name">Dratini</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/147.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Dragon</div>
+    <div class="info">Candy count: 25</div>
+    <div class="info">3.3 kg</div>
+    <div class="weaknesses">Ice Dragon Fairy</div>
+    <div class="time">06:41</div>
+</div>
+<div class="card" data-name="Dragonair">
+    <div class="header">148</div>
+    <div class="name">Dragonair</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/148.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Dragon</div>
+    <div class="info">Candy count: 100</div>
+    <div class="info">16.5 kg</div>
+    <div class="weaknesses">Ice Dragon Fairy</div>
+    <div class="time">11:57</div>
+</div>
+<div class="card" data-name="Dragonite">
+    <div class="header">149</div>
+    <div class="name">Dragonite</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/149.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Dragon Flying</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">210.0 kg</div>
+    <div class="weaknesses">Ice Rock Dragon Fairy</div>
+    <div class="time">23:38</div>
+</div>
+<div class="card" data-name="Mewtwo">
+    <div class="header">150</div>
+    <div class="name">Mewtwo</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/150.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">122.0 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">N/A</div>
+</div>
+<div class="card" data-name="Mew">
+    <div class="header">151</div>
+    <div class="name">Mew</div>
+    <div class="image">
+        <img src="http://www.serebii.net/pokemongo/pokemon/151.png" alt="Bulbasaur">
+    </div>
+    <div class="type">Psychic</div>
+    <div class="info">Candy count: undefined</div>
+    <div class="info">4.0 kg</div>
+    <div class="weaknesses">Bug Ghost Dark</div>
+    <div class="time">N/A</div>
+</div>
+    <script type="module" src="pokemons.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

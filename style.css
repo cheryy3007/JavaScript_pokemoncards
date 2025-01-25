@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #212529;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+.img{
+    margin: 146px 0 0 500px;
+}
+.controls select{
+    width: 210px;
+    height: 36px;
+    padding-left: 12px;
+    border-radius: 8px;
+    margin: 30px 0 0 0;
+}
+.controls input{
+    width: 210px;
+    height: 36px;
+    padding-left: 12px;
+    border-radius: 8px;
+    border: none;
+}
+.controls button{
+    width: 210px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    background-color: #198754;
+    color: white;
+}
+.pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+} 
+.card {
+    width: 250px;
+    height: 400px;
+    background-color: #ffeb3b;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin: 20px 0 20px 0;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+.card{
+    width: 250px;
+    height: 380px;
+    background-color: yellow;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+.header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff3d00;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.image {
+    margin: 15px 0;
+}
+.image img {
+    width: 80px;
+    height: auto;
+}
+.card.type {
+    background-color: #e0f7fa;
+    color: #00796b;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.card.info {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #212529;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;    
+}
+.card.weaknesses {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 21px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;    
+    color: #80007C;
+    font-weight: bold;
+    font-size: 14px;
+}
+,time {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #00FFFF;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
